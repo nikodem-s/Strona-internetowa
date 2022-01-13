@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper__title">
+            <a href="index.html" class="title">
+                <h1>PRZEWODNIK TURYSTYCZNY</h1>
+            </a>
+
+        </div>
+        <nav class="wrapper__nav">
+            <ul class="nav__list">
+                <li class="nav__list-item"><img src="Alone-amico.svg"></li>
+                <li class="nav__list-item"><a href="#">Oferta</a></li>
+                <li class="nav__list-item"><a href="#">Cennik</a></li>
+                <li class="nav__list-item"><a href="gallery.html">Galeria</a></li>
+                <li class="nav__list-item"><a href='#'>Pogoda</a> </li>
+                <li class="nav__list-item"><button data-modal-target="#modal" class="kontakt">Kontakt</button> </li>
+
+            </ul>
+        </nav>
+        <div class="wrapper__box">
+            <div class="image">
+                <img src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.6435-9/72775756_1977514555719201_8556658087333724160_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=174925&_nc_ohc=VppQA0GcerIAX8_p3aP&_nc_ht=scontent-waw1-1.xx&oh=00_AT_O4ku07EIHzhZXoEJgEkaYHenZJUaEAgS1N_SCVuxTAQ&oe=62034878">
+            </div>
+            <div class="text">
+                <h1>Przewodnik Tatrzański zaprasza do wspólnego zwiedzania Tatr i Zakopanego!</h1>
+                <p>Wycieczki z przewodnikiem tatrzanskim, poznawanie Tatr, Zakopanego, Podhala i okolic. Szeroki zakres usług i bogata oferta świadczona przez zawodowego przewodnika tatrzańskiego. Proszę pamiętać, że wyłącznie licencjonowani przewodnicy
+                    tatrzańscy są gwarancją rzetelnie przekazanych informacji oraz bezpieczeństwa na górskich wycieczkach! Jako przewodnik tatrzański — górski jestem otwarty na wszystkie przewodnickie wyzwania. Zapraszam grupy szkolne, firmy, turystów
+                    indywidualnych … Wspólne zwiedzanie Tatr i Zakopanego będzie dla Was okazją do poznania tych wspaniałych gór oraz miasta pod nimi. W Tatry przyjeżdża się tylko raz, potem się już tu tylko wraca! Nie czekaj i już dzisiaj umów się na
+                    wspólne wycieczki!
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title"> Formularz zgłoszeniowy</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <section id="index-modal" , class="wrapper-modal">
+                <input type="text" placeholder="Imie" id="fname">
+                <input type="text" placeholder="Nazwisko" id="fsurname">
+                <input type="text" placeholder="Numer telefonu lub email" id="femail">
+                <label for="date">DATA URODZENIA</label>
+                <input type="date" id="fdate" name="fname">
+                <button turn-off class="send-button">WYŚLIJ</button>
+            </section>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="skrypt.js"></script>
+</body>
+
+</html>

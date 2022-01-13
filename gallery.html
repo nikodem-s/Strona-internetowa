@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="index.css" rel="stylesheet">
+    <link href="gallery.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper__title">
+            <a href="index.html" class="title">
+                <h1>PRZEWODNIK TURYSTYCZNY</h1>
+            </a>
+
+        </div>
+        <nav class="wrapper__nav">
+            <ul class="nav__list">
+                <li class="nav__list-item"><img src="Alone-amico.svg"></li>
+                <li class="nav__list-item"><a href="index.html">Główna</a></li>
+                <li class="nav__list-item"><a href="#">Oferta</a></li>
+                <li class="nav__list-item"><a href="#">Cennik</a></li>
+                <li class="nav__list-item"><a href='#'>Pogoda</a> </li>
+                <li class="nav__list-item"><button data-modal-target="#modal" class="kontakt">Kontakt</button> </li>
+
+            </ul>
+        </nav>
+    </div>
+    <section id="index-gallery" class="wrapper-gallery">
+        <!-- <p>Nikodem Sala</p> -->
+        <!-- <h1>Moja galeria</h1> -->
+        <div class="gallery-img img1">
+            <div><a href="#">Signalkuppe</a></div>
+        </div>
+        <div class="gallery-img img2">
+            <div><a href="#">Weisshorn</a></div>
+        </div>
+        <div class="gallery-img img3">
+            <div><a href="#">Mont Maudit</a></div>
+        </div>
+
+        <div class="gallery-img img4">
+            <div><a href="#">Mont Blanc du Tacul</a></div>
+        </div>
+        <div class="gallery-img img5">
+            <div><a href="#">Strahlhorn</a></div>
+        </div>
+        <div class="gallery-img img6">
+            <div><a href="#">Schreckhorn</a></div>
+        </div>
+        <div class="gallery-img img7">
+            <div><a href="#">Hinter Fiescherhorn</a></div>
+        </div>
+    </section>
+    <script src="gallery.js"></script>
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title"> Formularz kontaktowy</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <section id="index-modal" , class="wrapper-modal">
+                <input type="text" placeholder="Imie" id="fname">
+                <input type="text" placeholder="Nazwisko" id="fsurname">
+                <input type="text" placeholder="Numer telefonu lub email" id="femail">
+                <label for="date">DATA URODZENIA</label>
+                <input type="date" id="fdate" name="fname">
+                <button turn-off class="send-button">WYŚLIJ</button>
+            </section>
+        </div>
+
+    </div>
+    <div id="overlay"></div>
+    <script src="skrypt.js"></script>
+</body>
+
+</html>

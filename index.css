@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper-gallery {
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+body {
+    font-family: 'Poppins';
+    min-height: 100vh;
+    background-color: #9affd8;
+}
+
+.wrapper {
+    padding: 4rem;
+}
+
+.title {
+    text-decoration: none;
+    color: rgb(99, 99, 99);
+    font-size: 1.5rem;
+}
+
+.wrapper__title {
+    display: flex;
+    justify-content: center;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.kontakt {
+    color: #f1f1f1;
+    background-color: #438875;
+    padding: 16px 32px;
+    font-size: 24px;
+    border: none;
+    border-radius: 30px;
+}
+
+.kontakt:hover {
+    cursor: pointer;
+    background-color: #70d3b8;
+}
+
+.text h1 {
+    color: #3D9764;
+    margin-bottom: 15px;
+}
+
+.nav__list-item {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.nav__list-item img {
+    height: 200px;
+}
+
+.nav__list-item a:hover {
+    color: #70d3b8;
+    border-bottom: 2.25px solid #70d3b8;
+}
+
+.nav__list-item a {
+    text-decoration: none;
+    color: #3D9764;
+    font-size: 24px;
+}
+
+.wrapper__box {
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    width: 350px;
+    border-radius: 50%;
+}
+
+.text {
+    flex: 1;
+}
+
+
+/* POP UP FOR KONTAKT */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: 200ms ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    /*ladne wyswietlanie, top 50% i left 50% to centralnie prawy dolny rog, dzieki transform traanslate, mam idealnie na srodku */
+    border: 1px solid black;
+    border-radius: 10px;
+    /* border daje po prostu ramkę, a border-radius sprawa ze jest ona zaokraglona */
+    z-index: 10;
+    /* z-index jakby im wiekszy tym ma wiekszy proiorytet wyswietlania tzn, ze nasz pop-up wysiwtli sie nad wszystkim */
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid black;
+}
+
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, .5);
+    /* to wyzej ustawia, ze tlo jest wyszarzone gdy wyskakuje okienko */
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-body label {
+    padding: 10px 15px;
+}
+
+.modal-body div {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body {
+    background-color: #6a93cb;
+    background-image: linear-gradient(315deg, #6a93cb 0%, #a4bfef 74%);
+}
+
+.wrapper-modal #fname {
+    grid-area: imie;
+    width: 70%;
+    height: 30px;
+    display: flex;
+    /* margin-left: 20px; */
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.wrapper-modal #fsurname {
+    grid-area: nazwisko;
+    width: 70%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.wrapper-modal #femail {
+    width: 70%;
+    height: 30px;
+    border: 1px solid black;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.wrapper-modal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper-modal #fdate {
+    width: 70%;
+    height: 30px;
+    border: 1px solid black;
+    margin-top: 1px;
+    border-radius: 5px;
+}
+
+.send-button {
+    margin-top: 15px;
+    width: 100px;
+    border-radius: 15px;
+    background-color: rgb(204, 18, 18);
+    color: white;
+}
+
+.send-button:hover {
+    background-color: green;
+    cursor: pointer;
+}
